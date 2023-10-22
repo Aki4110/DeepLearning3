@@ -102,7 +102,7 @@ class SquareTest(unittest.TestCase):
         num_grad = numerial_diff(square, x)
         flg = np.allclose(x.grad, num_grad)
         self.assertTrue(flg)
-        
+
 def numerial_diff(f, x, eps=1e-4):
     x0 = Variable(x.data - eps)
     x1 = Variable(x.data + eps)
